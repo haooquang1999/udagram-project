@@ -51,6 +51,15 @@ jobs:
           name: Deploy Backend Application
           command: |
             npm run backend:deploy
+
+workflows:
+  udagram:
+    jobs:
+      - build :
+          filters:
+            branches:
+              only:
+                - main
 #   # deploy step will run only after manual approval
 # #   deploy:
 #     docker:
@@ -59,14 +68,7 @@ jobs:
 #     steps:
 
             
-# workflows:
-#   udagram:
-#     jobs:
-#       - build :
-#           filters:
-#             branches:
-#               only:
-#                 - main
+
     #       type: approval
     #       requires:
     #         - build
