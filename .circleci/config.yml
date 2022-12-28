@@ -59,7 +59,7 @@ workflows:
           filters:
             branches:
               only:
-                - main
+                - master
 #   # deploy step will run only after manual approval
 # #   deploy:
 #     docker:
